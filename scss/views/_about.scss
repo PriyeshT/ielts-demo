@@ -1,0 +1,46 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+.about-banner {
+  height: 250px;
+}
+
+.about-section {
+  @include outer-container;
+
+  .desc {
+    @include span-columns(9);
+    @include shift(1.5);
+    text-align: justify;
+  }
+}
+
+.about-content {
+  @include outer-container;
+
+  .why-us, .advantage {
+    @include span-columns(6);
+  }
+}
+
+@media screen and (max-width: 44em) {
+  .about-banner {
+    max-width: 100%;
+  }
+
+  .about-section {
+
+    .desc {
+      @include span-columns(10);
+      @include shift(1);
+      text-align: justify;
+    }
+  }
+
+  .about-content {
+    .why-us, .advantage {
+      @include span-columns(12);
+      border-bottom: 1px solid #dbdbdb;
+    }
+  }
+}
